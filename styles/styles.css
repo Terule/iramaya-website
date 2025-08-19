@@ -320,14 +320,18 @@ section {
 }
 
 .sobre-icon {
-    width: 200px;
-    height: 200px;
-    margin-top: -220px;
-    
+    width: 100%; 
+    max-width: 400px; 
+    margin: 0 auto; 
     display: flex;
     align-items: center;
     justify-content: center;
-    
+}
+
+.sobre-icon img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaços extras que a imagem pode ter */
 }
 
 .sobre-icon i {
@@ -677,11 +681,7 @@ section {
         display: flex;
     }
 
-    .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-    }
+
 
     .hero-title-main {
         font-size: 2.5rem;
@@ -753,4 +753,22 @@ section {
         max-width: 300px;
         justify-content: center;
     }
+}
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr; /* 1. Muda para uma coluna só */
+    text-align: center;
+    padding-top: 4rem; /* 2. Adiciona espaço no topo para o menu fixo */
+    gap: 2rem;
+  }
+
+  .hero-visual {
+    order: -1; /* 3. Joga a imagem para CIMA do texto */
+    margin-bottom: 1rem; /* 4. Adiciona um respiro abaixo da imagem */
+  }
+
+  .hero-content {
+    /* Garante que o conteúdo não fique "espremido" */
+    padding: 0 1rem; 
+  }
 }
