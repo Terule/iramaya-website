@@ -322,7 +322,7 @@ section {
 .sobre-icon {
     width: 100%; 
     max-width: 400px;
-    margin: 0 auto; 
+    margin: -200px 0 0 -200px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -659,7 +659,7 @@ section {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -690,6 +690,16 @@ section {
     .hero-title-sub {
         font-size: 1.2rem;
     }
+
+    .sobre-icon {
+    width: 100%; 
+    max-width: 400px;
+    margin: -150px -100px 0 -150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
     .hero-icon {
         width: 200px;
